@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+       .correct{
+           color:green;
+
+       }
+
+       .wrong{
+           color:red;
+           background: pink;
+       }
+
+       .done{
+           color:gray;
+           text-decoration:line-through;
+       }
+    </style>
+
+</head>
+<body>
+    <h1>Common jquiery methods</h1>
+
+    <ul id="common-methods">
+        <li>val()</li>
+        <li>text()</li>
+        <li>art</li>
+        <li>html</li>
+        <li>addclass</li>
+        <li>emoveClass</li>
+        <li>toggleClass</li>
+
+
+    </ul>
+    <img src="images.jpeg">
+
+    <input type="text" name="text" id="text" placeholder="write something">
+
+    <h2>task list</h2>
+    <ul id="task">
+        <li>go for a run</li>
+        <li>make homework</li>
+        <li>eaten whitn friends</li>
+    </ul>
+
+   
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous"></script>
+  <script>
+
+$('ul').text()
+$('ul').html()
+var current = $('#common-methods').html()
+ //get te current value form the input
+ current = $('input').value()
+
+ //set the input value
+ $('img').attr('width','30');
+
+ //change the width image
+ $('img').attr('src', 'images1.jpeg')
+
+//mark all task as correct
+$('#tasks').addClass('correct');
+
+//Toggle all task as wrong
+$('#tasks').toggleClass('wrong');
+
+//toggle all tasks wrong again
+$(tasks).toggleClass(wrong)
+
+
+
+</script>
+</body>
+</html>

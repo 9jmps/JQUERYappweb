@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery effects</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+    <style>
+        div{
+            background: yellow;
+            width:200px;
+            padding: 40px;
+            margin: 20px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Jquery effects</h1>
+
+
+    <h2>Fadeout</h2>
+
+    <div>Don't fade me!</div>
+    <div>please Don't fade me!</div>
+    <div>help help</div>
+
+    <button>clicK me</button>
+
+    <h2>slideOut example</h2>
+
+
+    <div class="slide">Don't fade me!</div>
+    <div class="slide">please Don't fade me!</div>
+    <div class="slide">help help</div>
+
+    <button id="slidebutton">clicK me</button>
+
+    <script>
+         
+         $('#slidebutton').on('click',function(){
+             $('.slide').slideToggle('slow',function(){
+                 console.log('slide done!');
+             });
+         })
+
+
+
+
+      $('button').on('click', function(){
+        $('div').fadeOut(5000, function(){
+            $(this).remove();
+            console.log('Fadeout compleat');
+        });
+       
+
+
+
+
+      });
+        
+    
+    </script>
+    
+</body>
+</html>
