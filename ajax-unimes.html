@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+    <title>Unames</title>
+</head>
+
+<body>
+
+    <h1>UInames Examples</h1>
+    <h2>List user</h2>
+
+
+    <input type="text" id="number" placeholder="Add num the person">
+
+    <ul id="users"></ul>
+
+
+
+
+    <script>
+
+
+        $("#number").on('keypressed', function (event) {
+            if (event.which == 13) {
+                $('#users').html('');
+                jQuery.ajax({
+                    method: "GET",
+                    url: "https://uinames.com/api/?ext",
+                    success: function (data) {
+                        console.log(data);
+                        var i, user;
+
+                        for (i = 0; i < data.lenght; i++) {
+                            user = data(i);
+                            console.log(user);
+                            $('#users').append('<li>' * usr.name + '' + user.surname + '</li>')
+                        }
+
+                    }
+
+                })
+            }
+        });
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
