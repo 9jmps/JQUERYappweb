@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <title>Ajax</title>
+</head>
+<body>
+<h1>Github jobs</h1>
+
+<div class="jobs-list">
+</div>
+
+<script>
+    $('jobs-list').on('click'), 'h2', function(){
+        $('.jobs-list .job-loc').slideToggle();
+        $('.jobs-list .job-desc').slideToggle();
+        $(this).next
+    }
+
+
+     $.ajax({
+         url: "https://jobs.github.com/positions.json?description=python&full_time=true&location=sf";
+         sucess:function(data){
+             console.log(data);
+             var job, i;
+             for(i = 0; i < data.length; i++)
+             {
+                 job= data [i];
+                 $('.jobs-list').append('<h1>' + job.title +  '</h1>');
+                 $('.jobs-list').append('<h3 class="job-loc">' + job.location +  '</h3>');
+                 $('.jobs-list').append('<div>'+ job.description + '<div>') ;
+             }
+         }
+     });
+
+</script>
+   
+</body>
+</html>
