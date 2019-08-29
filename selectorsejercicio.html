@@ -9,20 +9,22 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
+    <title>Exercise 1</title>
 
 		
 </head>
 <body>
-    <div> Div 1</div>
-    <div class="highest">Div 2</div>
-    <div id="there">Div 3</div>
-    <div class="highest">Div 4</div>
+    <div>Div 1</div>
+    <div class="highlight">Div 2</div>
+    <div id="third">Div 3</div>
+    <div class="highlight">Div 4</div>
 
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script>
-        $('hightlight').css('widht','200');
-        $('third').css('border', 'solid orange');
-
-    
+        $("div").css("background", "purple");
+        $(".highlight").css("width", "200px");
+        $("#third").css("border", "solid orange 2px");
+        $("div:nth-of-type(1)").css("color", "pink");
     </script>
   
 </body>

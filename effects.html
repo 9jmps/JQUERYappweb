@@ -23,48 +23,38 @@
 </head>
 <body>
 
-    <h1>Jquery effects</h1>
+    <h1>Jquery Effects</h1>
 
 
     <h2>Fadeout</h2>
 
-    <div>Don't fade me!</div>
-    <div>please Don't fade me!</div>
-    <div>help help</div>
+    <div class="fade">Don't fade me!</div>
+    <div class="fade">please Don't fade me!</div>
+    <div class="fade">help help</div>
 
-    <button>clicK me</button>
+    <button id="fade-button">clicK me</button>
 
-    <h2>slideOut example</h2>
-
+    <h2>SlideToggle example</h2>
 
     <div class="slide">Don't fade me!</div>
-    <div class="slide">please Don't fade me!</div>
-    <div class="slide">help help</div>
+    <div class="slide">Please Don't fade me!</div>
+    <div class="slide">Help help</div>
 
     <button id="slidebutton">clicK me</button>
 
     <script>
+           $("#fade-button").on("click", function(){
+            $(".fade").fadeOut(2000, function(){
+                $(this).remove();
+                console.log("Fadeout complete");
+            });
+        });
          
          $('#slidebutton').on('click',function(){
              $('.slide').slideToggle('slow',function(){
                  console.log('slide done!');
              });
          })
-
-
-
-
-      $('button').on('click', function(){
-        $('div').fadeOut(5000, function(){
-            $(this).remove();
-            console.log('Fadeout compleat');
-        });
-       
-
-
-
-
-      });
         
     
     </script>
