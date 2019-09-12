@@ -10,7 +10,6 @@
     <style>
         .correct {
             color: green;
-
         }
 
         .wrong {
@@ -37,26 +36,22 @@
         <li>addclass()</li>
         <li>removeClass()</li>
         <li>toggleClass()</li>
-
-
     </ul>
-    <img src="images.jpeg">
 
+    <img src="images.jpeg">
     <input type="text" name="text" id="text" placeholder="write something">
 
-    <h2>task list</h2>
+    <h2>Task list</h2>
     <ul id="tasks">
         <li>Go for a run</li>
         <li>Make homework</li>
         <li>Eaten whitn friends</li>
     </ul>
 
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
         </script>
     <script>
-
 
         //Add new elements
         var current = $('#common-methods').html();
@@ -73,7 +68,7 @@
         $('img').attr('width', '30');
 
         //change the width image
-        $('img').attr('src', 'images1.jpeg')
+        $('img').attr('src', 'images1.jpeg');
 
         //mark all task as correct
         $('#tasks').addClass('correct');
@@ -82,9 +77,7 @@
         $('#tasks').toggleClass('wrong');
 
         //toggle all tasks wrong again
-        $(tasks).toggleClass(wrong)
-
-
+        $('#tasks').toggleClass('wrong');
 
     </script>
 </body>
